@@ -13,6 +13,17 @@
 		BE934E0925E4CBFB00DC4D34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE934E0725E4CBFB00DC4D34 /* Main.storyboard */; };
 		BE934E0B25E4CC2200DC4D34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE934E0A25E4CC2200DC4D34 /* Assets.xcassets */; };
 		BE934E0E25E4CC2200DC4D34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE934E0C25E4CC2200DC4D34 /* LaunchScreen.storyboard */; };
+		BE934E2025E503FD00DC4D34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE934E1F25E503FD00DC4D34 /* ViewController.swift */; };
+		BE934E2425E5148E00DC4D34 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE934E2325E5148D00DC4D34 /* GoogleSignIn.bundle */; };
+		BE934E2725E514E600DC4D34 /* GoogleSignInDependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE934E2525E514E600DC4D34 /* GoogleSignInDependencies.framework */; };
+		BE934E2825E514E700DC4D34 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE934E2625E514E600DC4D34 /* GoogleSignIn.framework */; };
+		BE934E2B25E5155500DC4D34 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE934E2A25E5155500DC4D34 /* LocalAuthentication.framework */; };
+		BE934E2D25E5155F00DC4D34 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE934E2C25E5155F00DC4D34 /* SafariServices.framework */; };
+		BE934E2F25E5156A00DC4D34 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE934E2E25E5156900DC4D34 /* AuthenticationServices.framework */; };
+		BE934E3125E5157700DC4D34 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE934E3025E5157700DC4D34 /* SystemConfiguration.framework */; };
+		BEC7667225E621F10067F1E6 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7667125E621F10067F1E6 /* UserViewController.swift */; };
+		BEC766A925E634ED0067F1E6 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEC766A825E634ED0067F1E6 /* credentials.plist */; };
+		BEC766B025E669850067F1E6 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC766AF25E669850067F1E6 /* Toast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +35,17 @@
 		BE934E0A25E4CC2200DC4D34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE934E0D25E4CC2200DC4D34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE934E0F25E4CC2200DC4D34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE934E1F25E503FD00DC4D34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE934E2325E5148D00DC4D34 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
+		BE934E2525E514E600DC4D34 /* GoogleSignInDependencies.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignInDependencies.framework; sourceTree = "<group>"; };
+		BE934E2625E514E600DC4D34 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
+		BE934E2A25E5155500DC4D34 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		BE934E2C25E5155F00DC4D34 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		BE934E2E25E5156900DC4D34 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		BE934E3025E5157700DC4D34 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BEC7667125E621F10067F1E6 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		BEC766A825E634ED0067F1E6 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
+		BEC766AF25E669850067F1E6 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +53,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE934E3125E5157700DC4D34 /* SystemConfiguration.framework in Frameworks */,
+				BE934E2F25E5156A00DC4D34 /* AuthenticationServices.framework in Frameworks */,
+				BE934E2D25E5155F00DC4D34 /* SafariServices.framework in Frameworks */,
+				BE934E2B25E5155500DC4D34 /* LocalAuthentication.framework in Frameworks */,
+				BE934E2725E514E600DC4D34 /* GoogleSignInDependencies.framework in Frameworks */,
+				BE934E2825E514E700DC4D34 /* GoogleSignIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +70,7 @@
 			children = (
 				BE934E0025E4CBFB00DC4D34 /* ToDo */,
 				BE934DFF25E4CBFB00DC4D34 /* Products */,
+				BE934E2925E5155500DC4D34 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,10 +85,14 @@
 		BE934E0025E4CBFB00DC4D34 /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
+				BEC766AE25E669540067F1E6 /* Utility */,
+				BEC7666F25E620C70067F1E6 /* User */,
+				BE934E2125E5145900DC4D34 /* Third Party Library */,
 				BE934E1925E4CC6500DC4D34 /* Storyborad */,
 				BE934E1625E4CC3F00DC4D34 /* Delegates */,
 				BE934E1A25E4CC7800DC4D34 /* Dashboard */,
 				BE934E1825E4CC5300DC4D34 /* Bundle */,
+				BE934E1F25E503FD00DC4D34 /* ViewController.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -105,6 +138,60 @@
 				BE934E0525E4CBFB00DC4D34 /* DashboardViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BE934E2125E5145900DC4D34 /* Third Party Library */ = {
+			isa = PBXGroup;
+			children = (
+				BE934E2225E5146700DC4D34 /* GoogleSign */,
+			);
+			path = "Third Party Library";
+			sourceTree = "<group>";
+		};
+		BE934E2225E5146700DC4D34 /* GoogleSign */ = {
+			isa = PBXGroup;
+			children = (
+				BEC766A825E634ED0067F1E6 /* credentials.plist */,
+				BE934E2625E514E600DC4D34 /* GoogleSignIn.framework */,
+				BE934E2525E514E600DC4D34 /* GoogleSignInDependencies.framework */,
+				BE934E2325E5148D00DC4D34 /* GoogleSignIn.bundle */,
+			);
+			path = GoogleSign;
+			sourceTree = "<group>";
+		};
+		BE934E2925E5155500DC4D34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE934E3025E5157700DC4D34 /* SystemConfiguration.framework */,
+				BE934E2E25E5156900DC4D34 /* AuthenticationServices.framework */,
+				BE934E2C25E5155F00DC4D34 /* SafariServices.framework */,
+				BE934E2A25E5155500DC4D34 /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEC7666F25E620C70067F1E6 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				BEC7667025E620CF0067F1E6 /* ViewController */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		BEC7667025E620CF0067F1E6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BEC7667125E621F10067F1E6 /* UserViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BEC766AE25E669540067F1E6 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				BEC766AF25E669850067F1E6 /* Toast.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,7 +251,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE934E2425E5148E00DC4D34 /* GoogleSignIn.bundle in Resources */,
 				BE934E0E25E4CC2200DC4D34 /* LaunchScreen.storyboard in Resources */,
+				BEC766A925E634ED0067F1E6 /* credentials.plist in Resources */,
 				BE934E0B25E4CC2200DC4D34 /* Assets.xcassets in Resources */,
 				BE934E0925E4CBFB00DC4D34 /* Main.storyboard in Resources */,
 			);
@@ -178,7 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE934E0625E4CBFB00DC4D34 /* DashboardViewController.swift in Sources */,
+				BEC766B025E669850067F1E6 /* Toast.swift in Sources */,
+				BEC7667225E621F10067F1E6 /* UserViewController.swift in Sources */,
 				BE934E0225E4CBFB00DC4D34 /* AppDelegate.swift in Sources */,
+				BE934E2025E503FD00DC4D34 /* ViewController.swift in Sources */,
 				BE934E0425E4CBFB00DC4D34 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,10 +420,19 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Q459GXYYZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ToDo/Third\\ Party\\ Library/GoogleSign",
+					"$(PROJECT_DIR)/ToDo/Third\\ Party\\ Library/GoogleSign",
+				);
 				INFOPLIST_FILE = ToDo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = neha.gupta.ToDo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -347,10 +448,19 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Q459GXYYZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ToDo/Third\\ Party\\ Library/GoogleSign",
+					"$(PROJECT_DIR)/ToDo/Third\\ Party\\ Library/GoogleSign",
+				);
 				INFOPLIST_FILE = ToDo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = neha.gupta.ToDo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
