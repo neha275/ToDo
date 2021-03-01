@@ -17,19 +17,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottomRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="oCV-sm-aze">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kd2-9b-j4d">
-                                <rect key="frame" x="105.5" y="710" width="203" height="48"/>
+                                <rect key="frame" x="105.5" y="764" width="203" height="48"/>
                                 <state key="normal" title="Sign in with Google" image="google"/>
                                 <connections>
                                     <action selector="googleSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e4r-j0-sH6"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RJw-Qf-VJu">
+                                <rect key="frame" x="73" y="374" width="165.5" height="121"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello there," textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNu-DI-0KK">
+                                        <rect key="frame" x="0.0" y="0.0" width="165.5" height="37"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txt-dn-AJm">
+                                        <rect key="frame" x="0.0" y="42" width="165.5" height="37"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Onboard!" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKS-Dw-kIh">
+                                        <rect key="frame" x="0.0" y="84" width="165.5" height="37"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="UKS-Dw-kIh" firstAttribute="top" secondItem="txt-dn-AJm" secondAttribute="bottom" constant="5" id="H3D-6B-xoi"/>
+                                    <constraint firstItem="txt-dn-AJm" firstAttribute="top" secondItem="RNu-DI-0KK" secondAttribute="bottom" constant="5" id="e2F-xX-3fS"/>
+                                    <constraint firstItem="txt-dn-AJm" firstAttribute="top" secondItem="RNu-DI-0KK" secondAttribute="bottom" constant="5" id="eWf-PC-xWG"/>
+                                    <constraint firstItem="UKS-Dw-kIh" firstAttribute="top" secondItem="txt-dn-AJm" secondAttribute="bottom" constant="5" id="m0I-z2-c6E"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="Main"/>
                         <constraints>
+                            <constraint firstItem="RJw-Qf-VJu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="AyJ-oy-fr3"/>
                             <constraint firstItem="Kd2-9b-j4d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J8M-4U-rOA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kd2-9b-j4d" secondAttribute="bottom" constant="104" id="Pmu-Bs-MmD"/>
+                            <constraint firstItem="oCV-sm-aze" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MwS-HQ-7Yr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kd2-9b-j4d" secondAttribute="bottom" constant="50" id="Pmu-Bs-MmD"/>
+                            <constraint firstItem="oCV-sm-aze" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="S6U-oB-UR7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oCV-sm-aze" secondAttribute="trailing" id="WTo-wy-WLM"/>
+                            <constraint firstItem="RJw-Qf-VJu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="330" id="b7c-SW-YKt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oCV-sm-aze" secondAttribute="bottom" id="o04-iy-5p7"/>
                         </constraints>
                     </view>
                     <connections>
@@ -43,21 +81,10 @@
         <!--Dashboard View Controller-->
         <scene sceneID="X1N-h0-nfL">
             <objects>
-                <viewController id="r6c-VP-2cy" customClass="DashboardViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashboardViewController" id="r6c-VP-2cy" customClass="DashboardViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dGr-ZB-OF3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jg3-h1-YiR">
-                                <rect key="frame" x="0.0" y="789" width="414" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem systemItem="favorites" id="EH9-rL-Wof"/>
-                                    <tabBarItem systemItem="more" id="gCi-1Y-efE"/>
-                                </items>
-                            </tabBar>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="WfI-IQ-bjK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -69,7 +96,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background" width="973" height="1023.5"/>
         <image name="google" width="48" height="48"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Main">
             <color red="0.93725490196078431" green="0.27843137254901962" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

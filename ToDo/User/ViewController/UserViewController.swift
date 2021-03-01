@@ -25,6 +25,11 @@ class UserViewController: UIViewController {
         
     }
     
+    func redirectToDashboard() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "DashboardViewController") as DashboardViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
 }
 
