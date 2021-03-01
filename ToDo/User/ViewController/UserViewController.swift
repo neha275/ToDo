@@ -28,7 +28,18 @@ class UserViewController: UIViewController {
     func redirectToDashboard() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "DashboardViewController") as DashboardViewController
-        self.navigationController?.pushViewController(vc, animated: true)
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    func saveUserData(name:String, email:String) {
+        let objUser:User = User()
+        let result = objUser.saveData(name: name , email: email )
+        if result.0 {
+           redirectToDashboard()
+        }else {
+            Toast.showToast(controller: self, message: result.1)
+        }
     }
 
 }
@@ -48,18 +59,18 @@ extension UserViewController :  GIDSignInDelegate {
             return
         }
         // Perform any operations on signed in user here.
-        let userId = user.userID                  // For client-side use only!
-        print("Google User Id:\(String(describing: userId))")
-        let idToken = user.authentication.idToken // Safe to send to the server
-        print("Login Token:\(String(describing: idToken))")
-        let fullName = user.profile.name
-        print("Full Name: \(String(describing: fullName))")
-//        _ = user.profile.givenName
-//        _ = user.profile.familyName
-        let email = user.profile.email
-        print("Email: \(String(describing: email))")
-        
-        
+        /*let userId = user.userID                  // For client-side use only!
+        //print("Google User Id:\(String(describing: userId))")
+        //let idToken = user.authentication.idToken // Safe to send to the server
+        //print("Login Token:\(String(describing: idToken))")
+        //let userGivenName= user.profile.givenName
+        //let familyName = user.profile.familyName
+        */
+        let fullName = user.profile.name!
+        //print("Full Name: \(String(describing: fullName))")
+        let email = user.profile.email!
+        //print("Email: \(String(describing: email))")
+        saveUserData(name: fullName , email: email )
     }
 }
 

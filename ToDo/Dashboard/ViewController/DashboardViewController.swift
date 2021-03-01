@@ -8,7 +8,7 @@
 import UIKit
 import GoogleSignIn
 
-class DashboardViewController: UIViewController {
+class DashboardViewController: UITabBarController {
 
    
     
