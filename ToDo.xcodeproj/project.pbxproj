@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,8 @@
 		BEC7667225E621F10067F1E6 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7667125E621F10067F1E6 /* UserViewController.swift */; };
 		BEC766A925E634ED0067F1E6 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEC766A825E634ED0067F1E6 /* credentials.plist */; };
 		BEC766B025E669850067F1E6 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC766AF25E669850067F1E6 /* Toast.swift */; };
+		BED3441D25EF629E0071960A /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED3441C25EF629E0071960A /* AddViewController.swift */; };
+		BED3442A25EF7E140071960A /* TextFieldErrorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED3442925EF7E140071960A /* TextFieldErrorHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		BEC7667125E621F10067F1E6 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		BEC766A825E634ED0067F1E6 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		BEC766AF25E669850067F1E6 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		BED3441C25EF629E0071960A /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		BED3442925EF7E140071960A /* TextFieldErrorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldErrorHelper.swift; sourceTree = "<group>"; };
 		EC9ABB91CF99D08032E80BA7 /* Pods_ToDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,7 +86,6 @@
 				1A89C94B077BB8AE1A26E88C /* Pods-ToDo.debug.xcconfig */,
 				73EE9C536CE7ED4222052E05 /* Pods-ToDo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -124,6 +127,7 @@
 		BE934E0025E4CBFB00DC4D34 /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
+				BED3441A25EF61880071960A /* Task */,
 				BE61138A25ED060F00E7EF9B /* Database */,
 				BEC766AE25E669540067F1E6 /* Utility */,
 				BEC7666F25E620C70067F1E6 /* User */,
@@ -232,8 +236,26 @@
 			isa = PBXGroup;
 			children = (
 				BEC766AF25E669850067F1E6 /* Toast.swift */,
+				BED3442925EF7E140071960A /* TextFieldErrorHelper.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		BED3441A25EF61880071960A /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				BED3441B25EF61B00071960A /* ViewController */,
+			);
+			name = Task;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		BED3441B25EF61B00071960A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BED3441C25EF629E0071960A /* AddViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BED3441D25EF629E0071960A /* AddViewController.swift in Sources */,
 				BE934E0625E4CBFB00DC4D34 /* DashboardViewController.swift in Sources */,
 				BEC766B025E669850067F1E6 /* Toast.swift in Sources */,
 				BE61138D25ED06A100E7EF9B /* todolist.xcdatamodeld in Sources */,
@@ -360,6 +383,7 @@
 				BE934E2025E503FD00DC4D34 /* ViewController.swift in Sources */,
 				BE61139125ED0A6500E7EF9B /* User+CoreDataClass.swift in Sources */,
 				BE934E0425E4CBFB00DC4D34 /* SceneDelegate.swift in Sources */,
+				BED3442A25EF7E140071960A /* TextFieldErrorHelper.swift in Sources */,
 				BE61139225ED0A6500E7EF9B /* User+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
