@@ -6,22 +6,21 @@
 //
 
 import UIKit
-import GoogleSignIn
+import STTabbar
 
 class DashboardViewController: UITabBarController {
 
    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view
+        if let customTabbar = tabBar as? STTabbar {
+            customTabbar.centerButtonActionHandler = {
+                print("Center Button Tapped")
+                
+            }
+            
+        }
     }
-
-   
-    
-    
-    
 }
 
 

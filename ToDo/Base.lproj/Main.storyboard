@@ -78,65 +78,125 @@
             </objects>
             <point key="canvasLocation" x="-178.2608695652174" y="68.973214285714278"/>
         </scene>
-        <!--Item 2-->
+        <!--CalendraViewController-->
         <scene sceneID="2WB-bT-RyB">
             <objects>
-                <viewController id="ajH-g7-IU8" sceneMemberID="viewController">
+                <viewController id="ajH-g7-IU8" userLabel="CalendraViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KoU-gd-BVD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="jhc-Le-nIS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="LIM-Ny-HPv"/>
+                    <tabBarItem key="tabBarItem" title="Calendra" image="calendar" catalog="system" id="LIM-Ny-HPv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uhe-Gp-uS8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="610" y="197"/>
+            <point key="canvasLocation" x="1383" y="299"/>
         </scene>
-        <!--Item 1-->
+        <!--MainViewController-->
         <scene sceneID="Q4w-ko-PKU">
             <objects>
-                <viewController id="Lfv-vp-zjk" sceneMemberID="viewController">
+                <viewController id="Lfv-vp-zjk" userLabel="MainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="00K-bv-kOX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="3ks-hp-hkX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="UtE-e4-hUV"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="square.grid.2x2.fill" catalog="system" id="UtE-e4-hUV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tEU-yj-8nk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="610" y="842"/>
+            <point key="canvasLocation" x="143" y="760"/>
         </scene>
         <!--Dashboard View Controller-->
         <scene sceneID="UVv-ba-nj3">
             <objects>
                 <tabBarController storyboardIdentifier="DashboardViewController" id="GeZ-5a-QDU" customClass="DashboardViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dKx-YE-XT6">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dKx-YE-XT6" customClass="STTabbar" customModule="STTabbar">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="Color"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="centerButtonColor">
+                                <color key="value" name="Main"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tabbarColor">
+                                <color key="value" name="Secondary"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="plus" catalog="system"/>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="Lfv-vp-zjk" kind="relationship" relationship="viewControllers" id="jff-rm-90N"/>
                         <segue destination="ajH-g7-IU8" kind="relationship" relationship="viewControllers" id="7C4-oA-0Vg"/>
+                        <segue destination="4Mk-hO-fAN" kind="relationship" relationship="viewControllers" id="eqS-g5-NGC"/>
+                        <segue destination="k4J-wD-3nS" kind="relationship" relationship="viewControllers" id="peM-lD-Yig"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qlM-nk-rKM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="610" y="842"/>
+            <point key="canvasLocation" x="1128" y="990"/>
+        </scene>
+        <!--AccountViewContoller-->
+        <scene sceneID="Rvr-aR-MBh">
+            <objects>
+                <viewController id="4Mk-hO-fAN" userLabel="AccountViewContoller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iFc-j5-5iR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wIw-H0-C4i"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Account" image="person.2.fill" catalog="system" id="ouK-XC-CU1" userLabel="Account"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wzq-iE-oRF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1128" y="1791"/>
+        </scene>
+        <!--SettingViewController-->
+        <scene sceneID="WSu-dw-s5R">
+            <objects>
+                <viewController id="k4J-wD-3nS" userLabel="SettingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZlQ-mg-4sN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="n8G-ee-Bwn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape.fill" catalog="system" id="eeL-PF-GhK" userLabel="Setting"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="txn-hb-YL6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1848" y="1433"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="dKx-YE-XT6">
+            <size key="intrinsicContentSize" width="-1" height="83"/>
+        </designable>
+    </designables>
     <resources>
         <image name="background" width="973" height="1023.5"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="google" width="48" height="48"/>
+        <image name="person.2.fill" catalog="system" width="128" height="80"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Main">
             <color red="0.93725490196078431" green="0.27843137254901962" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary">
+            <color red="0.082352941176470587" green="0.066666666666666666" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
