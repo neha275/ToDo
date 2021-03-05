@@ -229,22 +229,12 @@
                                     <constraint firstAttribute="trailing" secondItem="Oq1-VN-EQX" secondAttribute="trailing" id="ztH-6A-5YF"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyx-HI-eKs">
-                                <rect key="frame" x="35" y="391.5" width="60" height="13.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="DHT-qx-nHt"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <color key="textColor" systemColor="systemRedColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wXi-Ej-TBO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wXi-Ej-TBO" firstAttribute="bottom" secondItem="O70-hQ-C9P" secondAttribute="bottom" constant="17" id="0zW-0x-fPV"/>
                             <constraint firstItem="nj7-CO-SOw" firstAttribute="leading" secondItem="wXi-Ej-TBO" secondAttribute="leading" constant="35" id="1XP-nm-aDA"/>
-                            <constraint firstItem="gyx-HI-eKs" firstAttribute="top" secondItem="5ZD-s2-Mff" secondAttribute="bottom" id="5aM-Rr-QMq"/>
                             <constraint firstItem="4Bh-D8-yzq" firstAttribute="top" secondItem="wXi-Ej-TBO" secondAttribute="top" constant="17" id="D4d-Ms-opb"/>
                             <constraint firstItem="wXi-Ej-TBO" firstAttribute="trailing" secondItem="Yz4-9g-B7Y" secondAttribute="trailing" constant="30" id="EPI-jC-rwm"/>
                             <constraint firstItem="5ZD-s2-Mff" firstAttribute="leading" secondItem="wXi-Ej-TBO" secondAttribute="leading" constant="35" id="EbS-aM-QRL"/>
@@ -258,14 +248,12 @@
                             <constraint firstItem="wXi-Ej-TBO" firstAttribute="trailing" secondItem="5ZD-s2-Mff" secondAttribute="trailing" constant="35" id="hJN-gU-MXp"/>
                             <constraint firstItem="Yz4-9g-B7Y" firstAttribute="top" secondItem="wXi-Ej-TBO" secondAttribute="top" constant="17" id="o0g-94-9so"/>
                             <constraint firstItem="O70-hQ-C9P" firstAttribute="leading" secondItem="wXi-Ej-TBO" secondAttribute="leading" id="pTY-Vn-ucI"/>
-                            <constraint firstItem="gyx-HI-eKs" firstAttribute="leading" secondItem="wXi-Ej-TBO" secondAttribute="leading" constant="35" id="rJO-CQ-cyt"/>
                             <constraint firstItem="4Bh-D8-yzq" firstAttribute="leading" secondItem="wXi-Ej-TBO" secondAttribute="leading" constant="35" id="tAL-PS-U46"/>
                             <constraint firstItem="wXi-Ej-TBO" firstAttribute="trailing" secondItem="nj7-CO-SOw" secondAttribute="trailing" constant="35" id="v6T-Al-Ykr"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btnClose" destination="Yz4-9g-B7Y" id="PeL-Tm-dUS"/>
-                        <outlet property="lblDateError" destination="gyx-HI-eKs" id="9WF-cS-GOA"/>
                         <outlet property="lblTodayDate" destination="g1q-NE-qw3" id="a74-ev-cbq"/>
                         <outlet property="lblTomorrowDate" destination="3pt-u0-LXu" id="UM1-bX-HbH"/>
                         <outlet property="lblUserSelectedDate" destination="DGj-kr-cua" id="sel-Cg-phz"/>
@@ -390,9 +378,6 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

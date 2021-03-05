@@ -13,7 +13,7 @@ class DashboardViewController: UITabBarController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        redirectToAddViewController()
+       redirectToAddViewController()
     }
     
     //MARK: - Set Redirection to Add View Controller
