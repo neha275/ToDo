@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		78B7FF89BB6CA31FD41E5EB6 /* Pods_ToDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9ABB91CF99D08032E80BA7 /* Pods_ToDo.framework */; };
+		BE2AAC2925F1ECBD004E7F4C /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AAC2725F1ECBD004E7F4C /* Task+CoreDataClass.swift */; };
+		BE2AAC2A25F1ECBD004E7F4C /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AAC2825F1ECBD004E7F4C /* Task+CoreDataProperties.swift */; };
 		BE57BA6625F017720057B9A3 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE57BA6525F017720057B9A3 /* AddViewController.swift */; };
-		BE57BA6A25F017A60057B9A3 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE57BA6825F017A60057B9A3 /* Task+CoreDataClass.swift */; };
-		BE57BA6B25F017A60057B9A3 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE57BA6925F017A60057B9A3 /* Task+CoreDataProperties.swift */; };
 		BE61138D25ED06A100E7EF9B /* todolist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE61138B25ED06A100E7EF9B /* todolist.xcdatamodeld */; };
 		BE61139125ED0A6500E7EF9B /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE61138F25ED0A6500E7EF9B /* User+CoreDataClass.swift */; };
 		BE61139225ED0A6500E7EF9B /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE61139025ED0A6500E7EF9B /* User+CoreDataProperties.swift */; };
@@ -37,9 +37,9 @@
 /* Begin PBXFileReference section */
 		1A89C94B077BB8AE1A26E88C /* Pods-ToDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo.debug.xcconfig"; path = "Target Support Files/Pods-ToDo/Pods-ToDo.debug.xcconfig"; sourceTree = "<group>"; };
 		73EE9C536CE7ED4222052E05 /* Pods-ToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo.release.xcconfig"; path = "Target Support Files/Pods-ToDo/Pods-ToDo.release.xcconfig"; sourceTree = "<group>"; };
+		BE2AAC2725F1ECBD004E7F4C /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataClass.swift"; path = "ToDo/Task/DataModel/Task+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		BE2AAC2825F1ECBD004E7F4C /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "ToDo/Task/DataModel/Task+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		BE57BA6525F017720057B9A3 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddViewController.swift; path = ToDo/Task/ViewController/AddViewController.swift; sourceTree = SOURCE_ROOT; };
-		BE57BA6825F017A60057B9A3 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BE57BA6925F017A60057B9A3 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BE61138C25ED06A100E7EF9B /* todolist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = todolist.xcdatamodel; sourceTree = "<group>"; };
 		BE61138F25ED0A6500E7EF9B /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BE61139025ED0A6500E7EF9B /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -96,8 +96,8 @@
 		BE57BA5F25F012110057B9A3 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				BE57BA6825F017A60057B9A3 /* Task+CoreDataClass.swift */,
-				BE57BA6925F017A60057B9A3 /* Task+CoreDataProperties.swift */,
+				BE2AAC2725F1ECBD004E7F4C /* Task+CoreDataClass.swift */,
+				BE2AAC2825F1ECBD004E7F4C /* Task+CoreDataProperties.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -398,8 +398,8 @@
 				BE61139125ED0A6500E7EF9B /* User+CoreDataClass.swift in Sources */,
 				BE934E0425E4CBFB00DC4D34 /* SceneDelegate.swift in Sources */,
 				BED3442A25EF7E140071960A /* TextFieldErrorHelper.swift in Sources */,
-				BE57BA6B25F017A60057B9A3 /* Task+CoreDataProperties.swift in Sources */,
-				BE57BA6A25F017A60057B9A3 /* Task+CoreDataClass.swift in Sources */,
+				BE2AAC2A25F1ECBD004E7F4C /* Task+CoreDataProperties.swift in Sources */,
+				BE2AAC2925F1ECBD004E7F4C /* Task+CoreDataClass.swift in Sources */,
 				BE61139225ED0A6500E7EF9B /* User+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
