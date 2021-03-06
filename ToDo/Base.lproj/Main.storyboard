@@ -88,7 +88,9 @@
                         <viewLayoutGuide key="safeArea" id="jhc-Le-nIS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendra" image="calendar" catalog="system" id="LIM-Ny-HPv"/>
+                    <tabBarItem key="tabBarItem" title="Calendra" image="calendar" catalog="system" id="LIM-Ny-HPv">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="3" vertical="3"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uhe-Gp-uS8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -276,7 +278,9 @@
                         <viewLayoutGuide key="safeArea" id="3ks-hp-hkX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dashboard" image="square.grid.2x2.fill" catalog="system" id="UtE-e4-hUV"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="square.grid.2x2.fill" catalog="system" id="UtE-e4-hUV">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="3" vertical="3"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tEU-yj-8nk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -286,7 +290,7 @@
         <scene sceneID="UVv-ba-nj3">
             <objects>
                 <tabBarController storyboardIdentifier="DashboardViewController" id="GeZ-5a-QDU" customClass="DashboardViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dKx-YE-XT6" customClass="STTabbar" customModule="STTabbar">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" id="dKx-YE-XT6" customClass="STTabbar" customModule="STTabbar">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -322,7 +326,9 @@
                         <viewLayoutGuide key="safeArea" id="wIw-H0-C4i"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Account" image="person.2.fill" catalog="system" id="ouK-XC-CU1" userLabel="Account"/>
+                    <tabBarItem key="tabBarItem" title="Account" image="person.2.fill" catalog="system" id="ouK-XC-CU1" userLabel="Account">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="3" vertical="3"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wzq-iE-oRF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -338,7 +344,9 @@
                         <viewLayoutGuide key="safeArea" id="n8G-ee-Bwn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape.fill" catalog="system" id="eeL-PF-GhK" userLabel="Setting"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape.fill" catalog="system" id="eeL-PF-GhK" userLabel="Setting">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="3" vertical="3"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="txn-hb-YL6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
