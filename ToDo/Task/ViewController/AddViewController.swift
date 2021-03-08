@@ -14,9 +14,10 @@ class AddViewController: UIViewController {
     @IBOutlet weak var txtDescription:UITextView!
     @IBOutlet weak var lblTodayDate:UILabel!
     @IBOutlet weak var lblTomorrowDate:UILabel!
-    @IBOutlet weak var lblUserSelectedDate:UILabel!
+    //@IBOutlet weak var lblUserSelectedDate:UILabel!
     @IBOutlet weak var btnClose:UIButton!
     @IBOutlet weak var uvDate:UIView!
+    @IBOutlet weak var userSelectedDatePicker:UIDatePicker!
     
     //MARK: - Variable's & Constants
     let date = Date()
@@ -31,6 +32,10 @@ class AddViewController: UIViewController {
         formatter.dateFormat = kDateFormat
         txtDescription.delegate = self
         txtTaskName.delegate = self
+        
+        let dayAfter =  Calendar.current.date(byAdding: .day, value: 2, to: Date())!
+        
+        userSelectedDatePicker.setDate(dayAfter, animated: false)
         roundedView()
         circleCloseButton()
         addPlaceholderInDescription()
@@ -40,36 +45,34 @@ class AddViewController: UIViewController {
     @IBAction func onTapAddButton(_ sender:Any) {
         validateInput()
     }
+    @IBAction func onUserSelectedTap(_ sender: Any) {
+        clearLabel()
+        selectedDate = userSelectedDatePicker.date
+        print("User selected \(String(describing: selectedDate))")
+    }
     
     @IBAction func onTabTodayDate(_ sender:Any) {
         
-        setVisiblityOfDateError()
+        clearLabel()
         selectedDate = date
+        print("User selected \(String(describing: selectedDate))")
         lblTodayDate.text = formatter.string(from: date)
     }
     
     @IBAction func onTapTomorrowDate(_ sender: Any) {
-        setVisiblityOfDateError()
+        clearLabel()
         let tommorrowDate = Calendar.current.date(byAdding: .day, value: 1, to: date)
         selectedDate = tommorrowDate
         lblTomorrowDate.text = formatter.string(from: tommorrowDate ?? date)
     }
     
-    @IBAction func onTapSelectDate(_ sender: Any){
-        setVisiblityOfDateError()
-    }
     
     @IBAction func onCloseTap(_ sender:Any) {
         goBack()
     }
     
     //MARK: - Helper
-    func setVisiblityOfDateError() {
-        if !lblUserSelectedDate.isHidden {
-            lblUserSelectedDate.isHidden  = true
-        }
-        clearLabel()
-    }
+   
     
     func validateInput() {
         if (txtTaskName.text == "") {
@@ -88,7 +91,6 @@ class AddViewController: UIViewController {
     func clearLabel() {
         lblTomorrowDate.text = String()
         lblTodayDate.text = String()
-        lblUserSelectedDate.text = String()
     }
     
     func addPlaceholderInDescription() {
@@ -110,6 +112,18 @@ class AddViewController: UIViewController {
     
     //MARK: -  Save Data in Core data
     func saveTask() {
+        let objTaskDataModel = Task()
+        let taskName = txtTaskName.text!
+        let taskDescription = txtDescription.text!
+        
+        let result = objTaskDataModel.saveTask(name: taskName, description: taskDescription, date: selectedDate ?? Date())
+        
+        if result.0 == NetworkHelper.RequestStatus.Success.rawValue{
+            Toast.showToast(controller: self, message: "Save Successfully")
+            goBack()
+        }else {
+            Toast.showToast(controller: self, message: result.1)
+        }
         
     }
     
