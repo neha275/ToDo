@@ -11,6 +11,7 @@
 		BE1FA07B25F72CC100F32A13 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FA07A25F72CC100F32A13 /* MainViewController.swift */; };
 		BE1FA08025F780E200F32A13 /* TaskListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FA07E25F780E200F32A13 /* TaskListTableViewCell.swift */; };
 		BE1FA08125F780E200F32A13 /* TaskListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1FA07F25F780E200F32A13 /* TaskListTableViewCell.xib */; };
+		BE1FA08525F7F83400F32A13 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FA08425F7F83400F32A13 /* Constant.swift */; };
 		BE2AAC2925F1ECBD004E7F4C /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AAC2725F1ECBD004E7F4C /* Task+CoreDataClass.swift */; };
 		BE2AAC2A25F1ECBD004E7F4C /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AAC2825F1ECBD004E7F4C /* Task+CoreDataProperties.swift */; };
 		BE2AAC2D25F20626004E7F4C /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AAC2C25F20626004E7F4C /* NetworkHelper.swift */; };
@@ -44,6 +45,7 @@
 		BE1FA07A25F72CC100F32A13 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BE1FA07E25F780E200F32A13 /* TaskListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTableViewCell.swift; sourceTree = "<group>"; };
 		BE1FA07F25F780E200F32A13 /* TaskListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskListTableViewCell.xib; sourceTree = "<group>"; };
+		BE1FA08425F7F83400F32A13 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		BE2AAC2725F1ECBD004E7F4C /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataClass.swift"; path = "ToDo/Task/DataModel/Task+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		BE2AAC2825F1ECBD004E7F4C /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "ToDo/Task/DataModel/Task+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		BE2AAC2C25F20626004E7F4C /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				BEC766AF25E669850067F1E6 /* Toast.swift */,
 				BED3442925EF7E140071960A /* TextFieldErrorHelper.swift */,
 				BE2AAC2C25F20626004E7F4C /* NetworkHelper.swift */,
+				BE1FA08425F7F83400F32A13 /* Constant.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE2AAC2D25F20626004E7F4C /* NetworkHelper.swift in Sources */,
+				BE1FA08525F7F83400F32A13 /* Constant.swift in Sources */,
 				BE934E0625E4CBFB00DC4D34 /* DashboardViewController.swift in Sources */,
 				BE57BA6625F017720057B9A3 /* AddViewController.swift in Sources */,
 				BEC766B025E669850067F1E6 /* Toast.swift in Sources */,
