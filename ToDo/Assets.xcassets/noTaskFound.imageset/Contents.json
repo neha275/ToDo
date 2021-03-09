@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "notepad@1.png",
+      "filename" : "notepad-3.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "notepad@2.png",
+      "filename" : "notepad-2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "notepad@3.png",
+      "filename" : "notepad.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
