@@ -13,14 +13,12 @@ class TaskListTableViewCell: UITableViewCell {
     @IBOutlet weak var lblDescription:UILabel!
     @IBOutlet weak var lblDate:UILabel!
     @IBOutlet weak var lblId:UILabel!
+    @IBOutlet weak var uvBackground:UIView!
     
 
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        //lblId.isHidden = true
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

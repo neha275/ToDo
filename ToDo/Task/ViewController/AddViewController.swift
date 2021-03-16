@@ -25,6 +25,7 @@ class AddViewController: UIViewController {
     let kDescriptionPlacholder  = "Description"
     let kDateFormat = "dd/MM/yyyy"
     var selectedDate:Date? = nil
+    var refreshTaskTableView:UpdateMainView?
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -129,7 +130,9 @@ class AddViewController: UIViewController {
     
     //MARK:- Navigation
     func goBack() {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: {() -> Void in
+            self.refreshTaskTableView?.refreshTableViewWithNewData()
+        })
     }
     
     

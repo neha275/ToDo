@@ -10,8 +10,8 @@
 		78B7FF89BB6CA31FD41E5EB6 /* Pods_ToDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9ABB91CF99D08032E80BA7 /* Pods_ToDo.framework */; };
 		BE1FA07B25F72CC100F32A13 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FA07A25F72CC100F32A13 /* MainViewController.swift */; };
 		BE1FA08025F780E200F32A13 /* TaskListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FA07E25F780E200F32A13 /* TaskListTableViewCell.swift */; };
-		BE1FA08125F780E200F32A13 /* TaskListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1FA07F25F780E200F32A13 /* TaskListTableViewCell.xib */; };
 		BE1FA08525F7F83400F32A13 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FA08425F7F83400F32A13 /* Constant.swift */; };
+		BE214BF025F8DDBC008B310C /* TaskProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE214BEF25F8DDBC008B310C /* TaskProtocols.swift */; };
 		BE2AAC2925F1ECBD004E7F4C /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AAC2725F1ECBD004E7F4C /* Task+CoreDataClass.swift */; };
 		BE2AAC2A25F1ECBD004E7F4C /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AAC2825F1ECBD004E7F4C /* Task+CoreDataProperties.swift */; };
 		BE2AAC2D25F20626004E7F4C /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AAC2C25F20626004E7F4C /* NetworkHelper.swift */; };
@@ -44,8 +44,8 @@
 		73EE9C536CE7ED4222052E05 /* Pods-ToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo.release.xcconfig"; path = "Target Support Files/Pods-ToDo/Pods-ToDo.release.xcconfig"; sourceTree = "<group>"; };
 		BE1FA07A25F72CC100F32A13 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BE1FA07E25F780E200F32A13 /* TaskListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTableViewCell.swift; sourceTree = "<group>"; };
-		BE1FA07F25F780E200F32A13 /* TaskListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskListTableViewCell.xib; sourceTree = "<group>"; };
 		BE1FA08425F7F83400F32A13 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		BE214BEF25F8DDBC008B310C /* TaskProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskProtocols.swift; path = ToDo/Task/ViewModel/TaskProtocols.swift; sourceTree = SOURCE_ROOT; };
 		BE2AAC2725F1ECBD004E7F4C /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataClass.swift"; path = "ToDo/Task/DataModel/Task+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		BE2AAC2825F1ECBD004E7F4C /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "ToDo/Task/DataModel/Task+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		BE2AAC2C25F20626004E7F4C /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
@@ -107,9 +107,16 @@
 			isa = PBXGroup;
 			children = (
 				BE1FA07E25F780E200F32A13 /* TaskListTableViewCell.swift */,
-				BE1FA07F25F780E200F32A13 /* TaskListTableViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BE214BEE25F8DD53008B310C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BE214BEF25F8DDBC008B310C /* TaskProtocols.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		BE57BA5F25F012110057B9A3 /* DataModel */ = {
@@ -280,6 +287,7 @@
 		BED3441A25EF61880071960A /* Task */ = {
 			isa = PBXGroup;
 			children = (
+				BE214BEE25F8DD53008B310C /* ViewModel */,
 				BE57BA5F25F012110057B9A3 /* DataModel */,
 				BED3441B25EF61B00071960A /* ViewController */,
 			);
@@ -358,7 +366,6 @@
 				BE934E0E25E4CC2200DC4D34 /* LaunchScreen.storyboard in Resources */,
 				BEC766A925E634ED0067F1E6 /* credentials.plist in Resources */,
 				BE934E0B25E4CC2200DC4D34 /* Assets.xcassets in Resources */,
-				BE1FA08125F780E200F32A13 /* TaskListTableViewCell.xib in Resources */,
 				BE934E0925E4CBFB00DC4D34 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +429,7 @@
 				BE934E0225E4CBFB00DC4D34 /* AppDelegate.swift in Sources */,
 				BE934E2025E503FD00DC4D34 /* ViewController.swift in Sources */,
 				BE1FA08025F780E200F32A13 /* TaskListTableViewCell.swift in Sources */,
+				BE214BF025F8DDBC008B310C /* TaskProtocols.swift in Sources */,
 				BE61139125ED0A6500E7EF9B /* User+CoreDataClass.swift in Sources */,
 				BE1FA07B25F72CC100F32A13 /* MainViewController.swift in Sources */,
 				BE934E0425E4CBFB00DC4D34 /* SceneDelegate.swift in Sources */,
