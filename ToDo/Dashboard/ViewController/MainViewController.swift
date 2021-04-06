@@ -81,39 +81,26 @@ extension MainViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskListTableViewCell", for: indexPath) as! TaskListTableViewCell
         let task = taskList[indexPath.row]
-        cell.uvBackground.backgroundColor = UIColor.systemGray6
-        if ((indexPath.row) + 1) % 2 == 0 {
-            cell.uvBackground.backgroundColor = UIColor.lightGray
-        }
         cell.lblId.text = "\(task.id)"
-        cell.lblTaskName.text = task.taskName
-        cell.lblDescription.text = task.taskdescription
+        cell.lblTaskName.text = "\(task.taskName ?? "No Title")"
+        cell.lblDescription.text = "\(task.taskdescription ?? "No Description")"
         cell.lblDate.text = formatter.string(from: task.date ?? Date())
 
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            tableView.estimatedRowHeight = 50
+        tableView.estimatedRowHeight = 80
         return UITableView.automaticDimension
-        }
-    
-    func heightForView(text:String, font:UIFont, width:CGFloat) -> CGFloat{
-        let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
-        label.numberOfLines = 0
-        label.lineBreakMode = NSLineBreakMode.byWordWrapping
-        label.font = font
-        label.text = text
-
-        label.sizeToFit()
-        return label.frame.height
     }
+    
+    
 }
 
 extension MainViewController : UpdateMainView {
     func refreshTableViewWithNewData() {
-       // self.tblTaskList.reloadData()
         self.fetchAllData()
+        self.tblTaskList.reloadData()
     }
     
     

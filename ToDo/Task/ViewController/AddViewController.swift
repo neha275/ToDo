@@ -33,7 +33,7 @@ class AddViewController: UIViewController {
         formatter.dateFormat = kDateFormat
         txtDescription.delegate = self
         txtTaskName.delegate = self
-        
+        txtTaskName.layer.borderWidth = 1.5
         let dayAfter =  Calendar.current.date(byAdding: .day, value: 2, to: Date())!
         
         userSelectedDatePicker.setDate(dayAfter, animated: false)
@@ -97,7 +97,7 @@ class AddViewController: UIViewController {
     func addPlaceholderInDescription() {
         txtDescription.text = kDescriptionPlacholder
         txtDescription.textColor = UIColor.lightGray
-        txtDescription.layer.borderWidth = 1.0
+        txtDescription.layer.borderWidth = 1.5
         txtDescription.layer.borderColor = UIColor.black.cgColor
     }
     
@@ -160,9 +160,12 @@ extension AddViewController : UITextViewDelegate {
             
             
         }
+        
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
+        textView.layer.borderColor = UIColor.black.cgColor
+        textView.layer.borderWidth = 1.5
         if textView.text.isEmpty {
             textView.text = kDescriptionPlacholder
             textView.textColor = UIColor.lightGray
@@ -173,5 +176,12 @@ extension AddViewController : UITextViewDelegate {
 extension AddViewController :UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = UIColor(named: "Main")?.cgColor
+        textField.layer.borderWidth = 1.5
+        
+    }
+    
+    func textFieldDidEndEditing(_ textField:UITextField){
+        textField.layer.borderColor = UIColor.black.cgColor
+        textField.layer.borderWidth = 1.5
     }
 }
