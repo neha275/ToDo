@@ -15,6 +15,8 @@ class MainViewController: UIViewController {
     
     //MARK: - Variable and Constant Decelration
     var taskList:[Task]!
+    var refreshControl = UIRefreshControl()
+    var isFresh:Bool = false
     let formatter =  DateFormatter()
     let kDateFormat = "dd/MM/yyyy"
     
@@ -24,6 +26,7 @@ class MainViewController: UIViewController {
         formatter.dateFormat = kDateFormat
         tblTaskList.delegate = self
         tblTaskList.dataSource = self
+        addRefreshControl()
         fetchAllData()
     }
     
@@ -36,8 +39,7 @@ class MainViewController: UIViewController {
         let result = objTaskDataModel.getallTaskList()
         if result.status ==  NetworkHelper.RequestStatus.Success.rawValue {
             taskList = result.collection
-           checkDataStatus()
-            
+            checkDataStatus()
         }else {
             Toast.showToast(controller: self, message: result.errorMsg)
         }
@@ -53,12 +55,25 @@ class MainViewController: UIViewController {
             tblTaskList.isHidden = true
             imgNoTaskFound.isHidden = false
         }
+        if isFresh {
+            refreshControl.endRefreshing()
+        }
     }
     
+    //MARK: - Refresh Data
+    func addRefreshControl() {
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        tblTaskList.addSubview(refreshControl)
+    }
+    
+    @objc func refresh(_ sender: AnyObject) {
+        isFresh = true
+        fetchAllData()
+        
+    }
     
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddViewController" {
             let addViewContoller:AddViewController = segue.destination as! AddViewController
@@ -82,8 +97,8 @@ extension MainViewController : UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskListTableViewCell", for: indexPath) as! TaskListTableViewCell
         let task = taskList[indexPath.row]
         cell.lblId.text = "\(task.id)"
-        cell.lblTaskName.text = "\(task.taskName ?? "No Title")"
-        cell.lblDescription.text = "\(task.taskdescription ?? "No Description")"
+        cell.lblTaskName.text = task.taskName
+        cell.lblDescription.text = task.taskdescription
         cell.lblDate.text = formatter.string(from: task.date ?? Date())
 
         return cell
