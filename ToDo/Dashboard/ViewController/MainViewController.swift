@@ -26,6 +26,7 @@ class MainViewController: UIViewController {
         formatter.dateFormat = kDateFormat
         tblTaskList.delegate = self
         tblTaskList.dataSource = self
+        setNotificationForDataUpdate()
         addRefreshControl()
         fetchAllData()
     }
@@ -74,12 +75,12 @@ class MainViewController: UIViewController {
     }
     
     // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AddViewController" {
-            let addViewContoller:AddViewController = segue.destination as! AddViewController
-            addViewContoller.refreshTaskTableView = self
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "AddViewController" {
+//            let addViewContoller:AddViewController = segue.destination as! AddViewController
+//            addViewContoller.updateTableDelegate = self
+//        }
+//    }
     
 
 }
@@ -112,11 +113,13 @@ extension MainViewController : UITableViewDelegate, UITableViewDataSource {
     
 }
 
-extension MainViewController : UpdateMainView {
-    func refreshTableViewWithNewData() {
+extension MainViewController  {
+    @objc func refreshTableViewWithNewData() {
         self.fetchAllData()
-        self.tblTaskList.reloadData()
     }
     
+    func setNotificationForDataUpdate() {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.refreshTableViewWithNewData), name: NSNotification.Name(rawValue: "newDataNotif"), object: nil)
+    }
     
 }

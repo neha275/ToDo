@@ -23,11 +23,15 @@ class DashboardViewController: UITabBarController {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateViewController(identifier: "AddViewController") as AddViewController
                 vc.modalPresentationStyle = .fullScreen
+                //let mainViewController = storyboard.instantiateViewController(identifier: "MainViewController") as! MainViewController
+                //vc.updateTableDelegate = mainViewController
                 self.present(vc, animated: true, completion: nil)
             }
             
         }
     }
+    
+   
 }
 
 
