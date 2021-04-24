@@ -6,12 +6,19 @@
         <attribute name="taskdescription" optional="YES" attributeType="String"/>
         <attribute name="taskName" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="TaskStatus" representedClassName="TaskStatus" syncable="YES" codeGenerationType="class">
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="statusId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="taskId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
     <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="73"/>
         <element name="Task" positionX="-63" positionY="0" width="128" height="103"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="TaskStatus" positionX="-63" positionY="18" width="128" height="103"/>
     </elements>
 </model>
