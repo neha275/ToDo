@@ -484,7 +484,7 @@
     </designables>
     <resources>
         <image name="background" width="973" height="1023.5"/>
-        <image name="calendar" catalog="system" width="32" height="32"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="google" width="48" height="48"/>
         <image name="noTaskFound" width="128" height="128"/>

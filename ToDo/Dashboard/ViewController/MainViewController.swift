@@ -111,6 +111,53 @@ extension MainViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     
+    
+}
+
+
+extension MainViewController {
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive, title: "Delete", handler: {
+            (sction, view, completionHandler) in
+        
+            
+            let alertView = UIAlertController(title: "", message: "Are you sure you want to delete ? ", preferredStyle: .alert)
+                     let okAction = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+                        let taskToRemove = self.taskList![indexPath.row]
+                        let objViewModel = MainViewModel()
+                        let result  = objViewModel.deleteTask(taskDetails: taskToRemove)
+                        if result.0 == NetworkHelper.RequestStatus.Success.rawValue{
+                            Toast.showToast(controller: self, message: "Delete Task Successfully")
+                            self.fetchAllData()
+                        }else {
+                            Toast.showToast(controller: self, message: result.1)
+                        }
+                    })
+                    let cancelAction = UIAlertAction(title: "Cancel", style:.cancel, handler: { (alert) in
+                        //Disable the Action
+                        //self.fetchData()
+                    })
+                    alertView.addAction(okAction)
+                    alertView.addAction(cancelAction)
+                    self.present(alertView, animated: true, completion: nil)
+        })
+        action.image =  UIImage(systemName: "xmark.bin")
+        
+        return  UISwipeActionsConfiguration(actions: [action])
+
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let closeAction = UIContextualAction(style: .normal, title:  "Mark as Done", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+                    print("CloseAction ...")
+                    success(true)
+                })
+        
+        closeAction.backgroundColor = .blue
+        closeAction.image = UIImage(systemName: "envelope.open")
+        return UISwipeActionsConfiguration(actions: [closeAction])
+
+    }
 }
 
 extension MainViewController  {

@@ -33,6 +33,16 @@ public class Task: NSManagedObject {
         
     }
     
+    func deleteTask(taskDetails:Task) -> (Int,String) {
+        do{
+            context.delete(taskDetails)
+            try context.save()
+            return (  NetworkHelper.RequestStatus.Success.rawValue,  "Deleted task Successfully")
+        }catch{
+            return (  NetworkHelper.RequestStatus.Fail.rawValue,  "Unable to save data \(error.localizedDescription)")
+        }
+    }
+    
     fileprivate func getLastId() -> Int64 {
         let objUserDefault = UserDefaults.standard
         if let userID =  objUserDefault.value(forKey: "TaskId") as? Int64 {
