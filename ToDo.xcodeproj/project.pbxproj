@@ -11,9 +11,6 @@
 		BE1FA07B25F72CC100F32A13 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FA07A25F72CC100F32A13 /* MainViewController.swift */; };
 		BE1FA08025F780E200F32A13 /* TaskListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FA07E25F780E200F32A13 /* TaskListTableViewCell.swift */; };
 		BE1FA08525F7F83400F32A13 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FA08425F7F83400F32A13 /* Constant.swift */; };
-		BE214BF025F8DDBC008B310C /* TaskProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE214BEF25F8DDBC008B310C /* TaskProtocols.swift */; };
-		BE2AAC2925F1ECBD004E7F4C /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AAC2725F1ECBD004E7F4C /* Task+CoreDataClass.swift */; };
-		BE2AAC2A25F1ECBD004E7F4C /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AAC2825F1ECBD004E7F4C /* Task+CoreDataProperties.swift */; };
 		BE2AAC2D25F20626004E7F4C /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AAC2C25F20626004E7F4C /* NetworkHelper.swift */; };
 		BE5B77962632F4340095E8F3 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B77952632F4340095E8F3 /* MainViewModel.swift */; };
 		BE61138D25ED06A100E7EF9B /* todolist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE61138B25ED06A100E7EF9B /* todolist.xcdatamodeld */; };
@@ -33,9 +30,12 @@
 		BE934E2D25E5155F00DC4D34 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE934E2C25E5155F00DC4D34 /* SafariServices.framework */; };
 		BE934E2F25E5156A00DC4D34 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE934E2E25E5156900DC4D34 /* AuthenticationServices.framework */; };
 		BE934E3125E5157700DC4D34 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE934E3025E5157700DC4D34 /* SystemConfiguration.framework */; };
-		BEA9E7F72634ABF70045E918 /* TaskStatus+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9E7F52634ABF70045E918 /* TaskStatus+CoreDataProperties.swift */; };
-		BEA9E8222635124F0045E918 /* TaskStatus+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9E8212635124F0045E918 /* TaskStatus+CoreDataClass.swift */; };
-		BEA9E826263512880045E918 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9E825263512880045E918 /* AddViewController.swift */; };
+		BEA9E8342635144B0045E918 /* TaskProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9E82C2635144B0045E918 /* TaskProtocols.swift */; };
+		BEA9E8352635144B0045E918 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9E82E2635144B0045E918 /* Task+CoreDataProperties.swift */; };
+		BEA9E8362635144B0045E918 /* TaskStatus+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9E82F2635144B0045E918 /* TaskStatus+CoreDataClass.swift */; };
+		BEA9E8372635144B0045E918 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9E8302635144B0045E918 /* Task+CoreDataClass.swift */; };
+		BEA9E8382635144B0045E918 /* TaskStatus+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9E8312635144B0045E918 /* TaskStatus+CoreDataProperties.swift */; };
+		BEA9E8392635144B0045E918 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9E8332635144B0045E918 /* AddViewController.swift */; };
 		BEC7667225E621F10067F1E6 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7667125E621F10067F1E6 /* UserViewController.swift */; };
 		BEC766A925E634ED0067F1E6 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEC766A825E634ED0067F1E6 /* credentials.plist */; };
 		BEC766B025E669850067F1E6 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC766AF25E669850067F1E6 /* Toast.swift */; };
@@ -48,9 +48,6 @@
 		BE1FA07A25F72CC100F32A13 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BE1FA07E25F780E200F32A13 /* TaskListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTableViewCell.swift; sourceTree = "<group>"; };
 		BE1FA08425F7F83400F32A13 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		BE214BEF25F8DDBC008B310C /* TaskProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskProtocols.swift; path = ToDo/Task/ViewModel/TaskProtocols.swift; sourceTree = SOURCE_ROOT; };
-		BE2AAC2725F1ECBD004E7F4C /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataClass.swift"; path = "ToDo/Task/DataModel/Task+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		BE2AAC2825F1ECBD004E7F4C /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "ToDo/Task/DataModel/Task+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		BE2AAC2C25F20626004E7F4C /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		BE5B77952632F4340095E8F3 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		BE61138C25ED06A100E7EF9B /* todolist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = todolist.xcdatamodel; sourceTree = "<group>"; };
@@ -72,9 +69,12 @@
 		BE934E2C25E5155F00DC4D34 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		BE934E2E25E5156900DC4D34 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		BE934E3025E5157700DC4D34 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		BEA9E7F52634ABF70045E918 /* TaskStatus+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TaskStatus+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BEA9E8212635124F0045E918 /* TaskStatus+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TaskStatus+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BEA9E825263512880045E918 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		BEA9E82C2635144B0045E918 /* TaskProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskProtocols.swift; sourceTree = "<group>"; };
+		BEA9E82E2635144B0045E918 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BEA9E82F2635144B0045E918 /* TaskStatus+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TaskStatus+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BEA9E8302635144B0045E918 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BEA9E8312635144B0045E918 /* TaskStatus+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TaskStatus+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BEA9E8332635144B0045E918 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		BEC7667125E621F10067F1E6 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		BEC766A825E634ED0067F1E6 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		BEC766AF25E669850067F1E6 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
@@ -115,25 +115,6 @@
 				BE1FA07E25F780E200F32A13 /* TaskListTableViewCell.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		BE214BEE25F8DD53008B310C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				BE214BEF25F8DDBC008B310C /* TaskProtocols.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		BE57BA5F25F012110057B9A3 /* DataModel */ = {
-			isa = PBXGroup;
-			children = (
-				BEA9E8212635124F0045E918 /* TaskStatus+CoreDataClass.swift */,
-				BEA9E7F52634ABF70045E918 /* TaskStatus+CoreDataProperties.swift */,
-				BE2AAC2725F1ECBD004E7F4C /* Task+CoreDataClass.swift */,
-				BE2AAC2825F1ECBD004E7F4C /* Task+CoreDataProperties.swift */,
-			);
-			path = DataModel;
 			sourceTree = "<group>";
 		};
 		BE5B77942632F3F20095E8F3 /* ViewModel */ = {
@@ -182,7 +163,7 @@
 		BE934E0025E4CBFB00DC4D34 /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
-				BED3441A25EF61880071960A /* Task */,
+				BEA9E82A2635144B0045E918 /* Task */,
 				BE61138A25ED060F00E7EF9B /* Database */,
 				BEC766AE25E669540067F1E6 /* Utility */,
 				BEC7666F25E620C70067F1E6 /* User */,
@@ -273,14 +254,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BEA9E824263512880045E918 /* ViewController */ = {
+		BEA9E82A2635144B0045E918 /* Task */ = {
 			isa = PBXGroup;
 			children = (
-				BEA9E825263512880045E918 /* AddViewController.swift */,
+				BEA9E82B2635144B0045E918 /* ViewModel */,
+				BEA9E82D2635144B0045E918 /* DataModel */,
+				BEA9E8322635144B0045E918 /* ViewController */,
 			);
-			name = ViewController;
-			path = ToDo/Task/ViewController;
-			sourceTree = SOURCE_ROOT;
+			path = Task;
+			sourceTree = "<group>";
+		};
+		BEA9E82B2635144B0045E918 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BEA9E82C2635144B0045E918 /* TaskProtocols.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BEA9E82D2635144B0045E918 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				BEA9E82E2635144B0045E918 /* Task+CoreDataProperties.swift */,
+				BEA9E82F2635144B0045E918 /* TaskStatus+CoreDataClass.swift */,
+				BEA9E8302635144B0045E918 /* Task+CoreDataClass.swift */,
+				BEA9E8312635144B0045E918 /* TaskStatus+CoreDataProperties.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		BEA9E8322635144B0045E918 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BEA9E8332635144B0045E918 /* AddViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
 		};
 		BEC7666F25E620C70067F1E6 /* User */ = {
 			isa = PBXGroup;
@@ -308,17 +317,6 @@
 				BE1FA08425F7F83400F32A13 /* Constant.swift */,
 			);
 			path = Utility;
-			sourceTree = "<group>";
-		};
-		BED3441A25EF61880071960A /* Task */ = {
-			isa = PBXGroup;
-			children = (
-				BEA9E824263512880045E918 /* ViewController */,
-				BE214BEE25F8DD53008B310C /* ViewModel */,
-				BE57BA5F25F012110057B9A3 /* DataModel */,
-			);
-			name = Task;
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,24 +437,24 @@
 			files = (
 				BE2AAC2D25F20626004E7F4C /* NetworkHelper.swift in Sources */,
 				BE1FA08525F7F83400F32A13 /* Constant.swift in Sources */,
+				BEA9E8392635144B0045E918 /* AddViewController.swift in Sources */,
 				BE934E0625E4CBFB00DC4D34 /* DashboardViewController.swift in Sources */,
 				BEC766B025E669850067F1E6 /* Toast.swift in Sources */,
-				BEA9E7F72634ABF70045E918 /* TaskStatus+CoreDataProperties.swift in Sources */,
+				BEA9E8362635144B0045E918 /* TaskStatus+CoreDataClass.swift in Sources */,
 				BE61138D25ED06A100E7EF9B /* todolist.xcdatamodeld in Sources */,
 				BEC7667225E621F10067F1E6 /* UserViewController.swift in Sources */,
 				BE934E0225E4CBFB00DC4D34 /* AppDelegate.swift in Sources */,
 				BE934E2025E503FD00DC4D34 /* ViewController.swift in Sources */,
-				BEA9E8222635124F0045E918 /* TaskStatus+CoreDataClass.swift in Sources */,
 				BE1FA08025F780E200F32A13 /* TaskListTableViewCell.swift in Sources */,
-				BE214BF025F8DDBC008B310C /* TaskProtocols.swift in Sources */,
 				BE61139125ED0A6500E7EF9B /* User+CoreDataClass.swift in Sources */,
-				BEA9E826263512880045E918 /* AddViewController.swift in Sources */,
+				BEA9E8342635144B0045E918 /* TaskProtocols.swift in Sources */,
+				BEA9E8372635144B0045E918 /* Task+CoreDataClass.swift in Sources */,
 				BE1FA07B25F72CC100F32A13 /* MainViewController.swift in Sources */,
 				BE5B77962632F4340095E8F3 /* MainViewModel.swift in Sources */,
 				BE934E0425E4CBFB00DC4D34 /* SceneDelegate.swift in Sources */,
+				BEA9E8382635144B0045E918 /* TaskStatus+CoreDataProperties.swift in Sources */,
 				BED3442A25EF7E140071960A /* TextFieldErrorHelper.swift in Sources */,
-				BE2AAC2A25F1ECBD004E7F4C /* Task+CoreDataProperties.swift in Sources */,
-				BE2AAC2925F1ECBD004E7F4C /* Task+CoreDataClass.swift in Sources */,
+				BEA9E8352635144B0045E918 /* Task+CoreDataProperties.swift in Sources */,
 				BE61139225ED0A6500E7EF9B /* User+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
