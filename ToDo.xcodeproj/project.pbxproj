@@ -15,7 +15,6 @@
 		BE2AAC2925F1ECBD004E7F4C /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AAC2725F1ECBD004E7F4C /* Task+CoreDataClass.swift */; };
 		BE2AAC2A25F1ECBD004E7F4C /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AAC2825F1ECBD004E7F4C /* Task+CoreDataProperties.swift */; };
 		BE2AAC2D25F20626004E7F4C /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AAC2C25F20626004E7F4C /* NetworkHelper.swift */; };
-		BE57BA6625F017720057B9A3 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE57BA6525F017720057B9A3 /* AddViewController.swift */; };
 		BE5B77962632F4340095E8F3 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B77952632F4340095E8F3 /* MainViewModel.swift */; };
 		BE61138D25ED06A100E7EF9B /* todolist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE61138B25ED06A100E7EF9B /* todolist.xcdatamodeld */; };
 		BE61139125ED0A6500E7EF9B /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE61138F25ED0A6500E7EF9B /* User+CoreDataClass.swift */; };
@@ -36,6 +35,7 @@
 		BE934E3125E5157700DC4D34 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE934E3025E5157700DC4D34 /* SystemConfiguration.framework */; };
 		BEA9E7F72634ABF70045E918 /* TaskStatus+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9E7F52634ABF70045E918 /* TaskStatus+CoreDataProperties.swift */; };
 		BEA9E8222635124F0045E918 /* TaskStatus+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9E8212635124F0045E918 /* TaskStatus+CoreDataClass.swift */; };
+		BEA9E826263512880045E918 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9E825263512880045E918 /* AddViewController.swift */; };
 		BEC7667225E621F10067F1E6 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7667125E621F10067F1E6 /* UserViewController.swift */; };
 		BEC766A925E634ED0067F1E6 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEC766A825E634ED0067F1E6 /* credentials.plist */; };
 		BEC766B025E669850067F1E6 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC766AF25E669850067F1E6 /* Toast.swift */; };
@@ -52,7 +52,6 @@
 		BE2AAC2725F1ECBD004E7F4C /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataClass.swift"; path = "ToDo/Task/DataModel/Task+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		BE2AAC2825F1ECBD004E7F4C /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "ToDo/Task/DataModel/Task+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		BE2AAC2C25F20626004E7F4C /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
-		BE57BA6525F017720057B9A3 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddViewController.swift; path = ToDo/Task/ViewController/AddViewController.swift; sourceTree = SOURCE_ROOT; };
 		BE5B77952632F4340095E8F3 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		BE61138C25ED06A100E7EF9B /* todolist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = todolist.xcdatamodel; sourceTree = "<group>"; };
 		BE61138F25ED0A6500E7EF9B /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -75,6 +74,7 @@
 		BE934E3025E5157700DC4D34 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BEA9E7F52634ABF70045E918 /* TaskStatus+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TaskStatus+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BEA9E8212635124F0045E918 /* TaskStatus+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TaskStatus+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BEA9E825263512880045E918 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		BEC7667125E621F10067F1E6 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		BEC766A825E634ED0067F1E6 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		BEC766AF25E669850067F1E6 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
@@ -273,6 +273,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BEA9E824263512880045E918 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BEA9E825263512880045E918 /* AddViewController.swift */,
+			);
+			name = ViewController;
+			path = ToDo/Task/ViewController;
+			sourceTree = SOURCE_ROOT;
+		};
 		BEC7666F25E620C70067F1E6 /* User */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,20 +313,12 @@
 		BED3441A25EF61880071960A /* Task */ = {
 			isa = PBXGroup;
 			children = (
+				BEA9E824263512880045E918 /* ViewController */,
 				BE214BEE25F8DD53008B310C /* ViewModel */,
 				BE57BA5F25F012110057B9A3 /* DataModel */,
-				BED3441B25EF61B00071960A /* ViewController */,
 			);
 			name = Task;
 			path = "New Group";
-			sourceTree = "<group>";
-		};
-		BED3441B25EF61B00071960A /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				BE57BA6525F017720057B9A3 /* AddViewController.swift */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,7 +440,6 @@
 				BE2AAC2D25F20626004E7F4C /* NetworkHelper.swift in Sources */,
 				BE1FA08525F7F83400F32A13 /* Constant.swift in Sources */,
 				BE934E0625E4CBFB00DC4D34 /* DashboardViewController.swift in Sources */,
-				BE57BA6625F017720057B9A3 /* AddViewController.swift in Sources */,
 				BEC766B025E669850067F1E6 /* Toast.swift in Sources */,
 				BEA9E7F72634ABF70045E918 /* TaskStatus+CoreDataProperties.swift in Sources */,
 				BE61138D25ED06A100E7EF9B /* todolist.xcdatamodeld in Sources */,
@@ -450,6 +450,7 @@
 				BE1FA08025F780E200F32A13 /* TaskListTableViewCell.swift in Sources */,
 				BE214BF025F8DDBC008B310C /* TaskProtocols.swift in Sources */,
 				BE61139125ED0A6500E7EF9B /* User+CoreDataClass.swift in Sources */,
+				BEA9E826263512880045E918 /* AddViewController.swift in Sources */,
 				BE1FA07B25F72CC100F32A13 /* MainViewController.swift in Sources */,
 				BE5B77962632F4340095E8F3 /* MainViewModel.swift in Sources */,
 				BE934E0425E4CBFB00DC4D34 /* SceneDelegate.swift in Sources */,
