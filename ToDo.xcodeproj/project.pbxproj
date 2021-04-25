@@ -34,7 +34,6 @@
 		BE934E2D25E5155F00DC4D34 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE934E2C25E5155F00DC4D34 /* SafariServices.framework */; };
 		BE934E2F25E5156A00DC4D34 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE934E2E25E5156900DC4D34 /* AuthenticationServices.framework */; };
 		BE934E3125E5157700DC4D34 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE934E3025E5157700DC4D34 /* SystemConfiguration.framework */; };
-		BEA9E7F32634AA650045E918 /* TaskStatus+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9E7F12634AA650045E918 /* TaskStatus+CoreDataProperties.swift */; };
 		BEA9E7F72634ABF70045E918 /* TaskStatus+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9E7F52634ABF70045E918 /* TaskStatus+CoreDataProperties.swift */; };
 		BEC7667225E621F10067F1E6 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7667125E621F10067F1E6 /* UserViewController.swift */; };
 		BEC766A925E634ED0067F1E6 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEC766A825E634ED0067F1E6 /* credentials.plist */; };
@@ -73,7 +72,6 @@
 		BE934E2C25E5155F00DC4D34 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		BE934E2E25E5156900DC4D34 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		BE934E3025E5157700DC4D34 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		BEA9E7F12634AA650045E918 /* TaskStatus+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TaskStatus+CoreDataProperties.swift"; path = "/Users/nehash/Documents/Neha/ForGithub/Todo/Code/ToDo/ToDo/New Group/DataModel/TaskStatus+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		BEA9E7F52634ABF70045E918 /* TaskStatus+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TaskStatus+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BEC7667125E621F10067F1E6 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		BEC766A825E634ED0067F1E6 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 		BE57BA5F25F012110057B9A3 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				BEA9E7F12634AA650045E918 /* TaskStatus+CoreDataProperties.swift */,
 				BEA9E7F52634ABF70045E918 /* TaskStatus+CoreDataProperties.swift */,
 				BE2AAC2725F1ECBD004E7F4C /* Task+CoreDataClass.swift */,
 				BE2AAC2825F1ECBD004E7F4C /* Task+CoreDataProperties.swift */,
@@ -456,7 +453,6 @@
 				BE2AAC2A25F1ECBD004E7F4C /* Task+CoreDataProperties.swift in Sources */,
 				BE2AAC2925F1ECBD004E7F4C /* Task+CoreDataClass.swift in Sources */,
 				BE61139225ED0A6500E7EF9B /* User+CoreDataProperties.swift in Sources */,
-				BEA9E7F32634AA650045E918 /* TaskStatus+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
