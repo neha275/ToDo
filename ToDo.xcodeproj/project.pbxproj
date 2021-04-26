@@ -32,9 +32,7 @@
 		BE934E3125E5157700DC4D34 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE934E3025E5157700DC4D34 /* SystemConfiguration.framework */; };
 		BEA9E8342635144B0045E918 /* TaskProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9E82C2635144B0045E918 /* TaskProtocols.swift */; };
 		BEA9E8352635144B0045E918 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9E82E2635144B0045E918 /* Task+CoreDataProperties.swift */; };
-		BEA9E8362635144B0045E918 /* TaskStatus+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9E82F2635144B0045E918 /* TaskStatus+CoreDataClass.swift */; };
 		BEA9E8372635144B0045E918 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9E8302635144B0045E918 /* Task+CoreDataClass.swift */; };
-		BEA9E8382635144B0045E918 /* TaskStatus+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9E8312635144B0045E918 /* TaskStatus+CoreDataProperties.swift */; };
 		BEA9E8392635144B0045E918 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9E8332635144B0045E918 /* AddViewController.swift */; };
 		BEC7667225E621F10067F1E6 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7667125E621F10067F1E6 /* UserViewController.swift */; };
 		BEC766A925E634ED0067F1E6 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEC766A825E634ED0067F1E6 /* credentials.plist */; };
@@ -71,9 +69,7 @@
 		BE934E3025E5157700DC4D34 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BEA9E82C2635144B0045E918 /* TaskProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskProtocols.swift; sourceTree = "<group>"; };
 		BEA9E82E2635144B0045E918 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BEA9E82F2635144B0045E918 /* TaskStatus+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TaskStatus+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BEA9E8302635144B0045E918 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BEA9E8312635144B0045E918 /* TaskStatus+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TaskStatus+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BEA9E8332635144B0045E918 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		BEC7667125E621F10067F1E6 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		BEC766A825E634ED0067F1E6 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
@@ -276,9 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				BEA9E82E2635144B0045E918 /* Task+CoreDataProperties.swift */,
-				BEA9E82F2635144B0045E918 /* TaskStatus+CoreDataClass.swift */,
 				BEA9E8302635144B0045E918 /* Task+CoreDataClass.swift */,
-				BEA9E8312635144B0045E918 /* TaskStatus+CoreDataProperties.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -440,7 +434,6 @@
 				BEA9E8392635144B0045E918 /* AddViewController.swift in Sources */,
 				BE934E0625E4CBFB00DC4D34 /* DashboardViewController.swift in Sources */,
 				BEC766B025E669850067F1E6 /* Toast.swift in Sources */,
-				BEA9E8362635144B0045E918 /* TaskStatus+CoreDataClass.swift in Sources */,
 				BE61138D25ED06A100E7EF9B /* todolist.xcdatamodeld in Sources */,
 				BEC7667225E621F10067F1E6 /* UserViewController.swift in Sources */,
 				BE934E0225E4CBFB00DC4D34 /* AppDelegate.swift in Sources */,
@@ -452,7 +445,6 @@
 				BE1FA07B25F72CC100F32A13 /* MainViewController.swift in Sources */,
 				BE5B77962632F4340095E8F3 /* MainViewModel.swift in Sources */,
 				BE934E0425E4CBFB00DC4D34 /* SceneDelegate.swift in Sources */,
-				BEA9E8382635144B0045E918 /* TaskStatus+CoreDataProperties.swift in Sources */,
 				BED3442A25EF7E140071960A /* TextFieldErrorHelper.swift in Sources */,
 				BEA9E8352635144B0045E918 /* Task+CoreDataProperties.swift in Sources */,
 				BE61139225ED0A6500E7EF9B /* User+CoreDataProperties.swift in Sources */,

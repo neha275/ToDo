@@ -23,19 +23,28 @@ public class Task: NSManagedObject {
         newTask.taskName = name
         newTask.taskdescription = description
         newTask.date = date
+        newTask.status = true
+        newTask.isDelete = false
         do {
             try context.save()
             return (NetworkHelper.RequestStatus.Success.rawValue, "")
+//            let objTaskStatus = TaskStatus()
+//            let result =  objTaskStatus.saveTaskStatus(taskId: id)
+//            if result.0 == NetworkHelper.RequestStatus.Success.rawValue {
+//
+//                return (NetworkHelper.RequestStatus.Success.rawValue, "")
+//            }else {
+//                return(NetworkHelper.RequestStatus.Fail.rawValue, "Unable to save in child table \(result.1)")
+            //}
         }catch {
             return (  NetworkHelper.RequestStatus.Fail.rawValue,  "Unable to save data \(error.localizedDescription)")
         }
-        
-        
     }
     
     func deleteTask(taskDetails:Task) -> (Int,String) {
         do{
-            context.delete(taskDetails)
+            taskDetails.isDelete = true
+            //context.delete(taskDetails)
             try context.save()
             return (  NetworkHelper.RequestStatus.Success.rawValue,  "Deleted task Successfully")
         }catch{
@@ -60,6 +69,8 @@ public class Task: NSManagedObject {
     
     func getallTaskList() -> (collection:[Task],status:Int,errorMsg:String) {
         let request = Task.fetchRequest() as NSFetchRequest<Task>
+        let predicate =  NSPredicate(format: "(isDelete = 0)")
+        request.predicate = predicate
         var allData:[Task] = [Task]()
         var errorMsg:String = String()
         var status: Int = NetworkHelper.RequestStatus.Success.rawValue
@@ -90,6 +101,8 @@ public class Task: NSManagedObject {
         }
         return (NetworkHelper.RequestStatus.Success.rawValue,"")
     }
+    
+   
     
     
 }
