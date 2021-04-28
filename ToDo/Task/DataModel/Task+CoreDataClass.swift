@@ -23,19 +23,11 @@ public class Task: NSManagedObject {
         newTask.taskName = name
         newTask.taskdescription = description
         newTask.date = date
-        newTask.status = true
+        newTask.status = false
         newTask.isDelete = false
         do {
             try context.save()
             return (NetworkHelper.RequestStatus.Success.rawValue, "")
-//            let objTaskStatus = TaskStatus()
-//            let result =  objTaskStatus.saveTaskStatus(taskId: id)
-//            if result.0 == NetworkHelper.RequestStatus.Success.rawValue {
-//
-//                return (NetworkHelper.RequestStatus.Success.rawValue, "")
-//            }else {
-//                return(NetworkHelper.RequestStatus.Fail.rawValue, "Unable to save in child table \(result.1)")
-            //}
         }catch {
             return (  NetworkHelper.RequestStatus.Fail.rawValue,  "Unable to save data \(error.localizedDescription)")
         }
@@ -86,23 +78,22 @@ public class Task: NSManagedObject {
     
     func updateTaskBy(task:Task) -> (Int, String) {
         let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-        let predicate =  NSPredicate(format: "(id = %@)", (task.id))
-        fetchRequest.predicate = predicate
+        //let predicate =  NSPredicate(format: "(id = %i", task.id)
+        //fetchRequest.predicate = predicate
         do {
             let result = try context.fetch(fetchRequest)
             let previousTask = result[0] as Task
             previousTask.taskName = task.taskName
             previousTask.taskdescription = task.taskdescription
             previousTask.date = task.date
-            
+            previousTask.isDelete = task.isDelete
+            previousTask.status = task.status
             try context.save()
         }catch{
             return (NetworkHelper.RequestStatus.Fail.rawValue,error.localizedDescription)
         }
         return (NetworkHelper.RequestStatus.Success.rawValue,"")
     }
-    
-   
-    
-    
 }
+
+
