@@ -14,4 +14,9 @@ class MainViewModel {
         let objDataModel = Task()
         return objDataModel.deleteTask(taskDetails: taskDetails)
     }
+    
+    func updateTaskAsDone(taskDetails:Task) -> (Int, String) {
+        let objDataModel = Task()
+        return objDataModel.updateTaskBy(task: taskDetails)
+    }
 }
