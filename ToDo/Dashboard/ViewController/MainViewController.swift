@@ -149,11 +149,20 @@ extension MainViewController {
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let closeAction = UIContextualAction(style: .normal, title:  "Mark as Done", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
-                    print("CloseAction ...")
+            let updateTask = self.taskList![indexPath.row]
+            updateTask.status = true
+            let objViewModel = MainViewModel()
+            let result  = objViewModel.updateTaskAsDone(taskDetails: updateTask) 
+            if result.0 == NetworkHelper.RequestStatus.Success.rawValue{
+                Toast.showToast(controller: self, message: "Delete Task Successfully")
+                self.fetchAllData()
+            }else {
+                Toast.showToast(controller: self, message: result.1)
+            }
                     success(true)
                 })
         
-        closeAction.backgroundColor = .blue
+        closeAction.backgroundColor = .green
         closeAction.image = UIImage(systemName: "envelope.open")
         return UISwipeActionsConfiguration(actions: [closeAction])
 
