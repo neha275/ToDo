@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
     
     //MARK: - Variable and Constant Decelration
     var taskList:[Task]!
+    var completedTaskList:[Task]!
     var refreshControl = UIRefreshControl()
     var isFresh:Bool = false
     let formatter =  DateFormatter()
@@ -40,7 +41,8 @@ class MainViewController: UIViewController {
         let result = objTaskDataModel.getallTaskList()
         if result.status ==  NetworkHelper.RequestStatus.Success.rawValue {
             taskList = result.collection
-            checkDataStatus()
+            completedTaskList = taskList.filter{$0.status == true}
+            
         }else {
             Toast.showToast(controller: self, message: result.errorMsg)
         }
@@ -87,16 +89,63 @@ class MainViewController: UIViewController {
 
 extension MainViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        taskList.count
+        switch section {
+        case 0:
+            return taskList.count
+        case 1:
+            return completedTaskList.count
+        default:
+            return taskList.count
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1 
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = UIView(frame: CGRect(x: tableView.bounds.origin.x, y: 0, width: tableView.frame.size.width, height: 50))
+        
+        //header.backgroundColor = UIColor(named: "Main")
+        
+        let headerSubview = UIView(frame: CGRect(x: 15, y: 0, width: header.frame.size.width - 33, height: 40))
+        headerSubview.backgroundColor = UIColor(named: "Main")
+        header.addSubview(headerSubview)
+        
+        let label = UILabel(frame: CGRect(x: 5, y: 5, width: headerSubview.frame.size.width - 15, height: headerSubview.frame.size.height - 10))
+        label.textColor = UIColor.white
+        headerSubview.addSubview(label)
+        switch section {
+        case 0:
+            label.text = "Pending Task"
+            break
+        case 1:
+            label.text = "Completed Task"
+            break
+        default:
+            label.text = "All Task"
+        }
+        return header
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskListTableViewCell", for: indexPath) as! TaskListTableViewCell
-        let task = taskList[indexPath.row]
+        var task:Task!
+        switch indexPath.section {
+        case 0:
+            task = taskList[indexPath.row]
+            break
+        case 1:
+            task = completedTaskList[indexPath.row]
+            break
+        default:
+            task = taskList[indexPath.row]
+        }
+        
         cell.lblId.text = "\(task.id)"
         cell.lblTaskName.text = task.taskName
         cell.lblDescription.text = task.taskdescription
