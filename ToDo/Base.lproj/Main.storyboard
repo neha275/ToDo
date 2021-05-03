@@ -87,45 +87,66 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="2sx-ds-Kth">
-                                <rect key="frame" x="0.0" y="54" width="414" height="354"/>
+                                <rect key="frame" x="5" y="54" width="409" height="353.5"/>
+                                <color key="tintColor" name="Main"/>
+                                <connections>
+                                    <action selector="onDateTap:" destination="ajH-g7-IU8" eventType="touchUpInside" id="BjL-kZ-tXp"/>
+                                </connections>
                             </datePicker>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EqD-Iy-piQ">
-                                <rect key="frame" x="0.0" y="412.5" width="414" height="395.5"/>
+                                <rect key="frame" x="0.0" y="412.5" width="414" height="385.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="q92-iw-ZHn">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CalendraTaskTableViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="q92-iw-ZHn" customClass="CalendraTaskTableViewCell" customModule="ToDo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="47"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q92-iw-ZHn" id="IFp-VJ-InJ">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="47"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGp-9B-KR9">
-                                                    <rect key="frame" x="27" y="13" width="360" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yo yo again seeing it's working or not" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGp-9B-KR9">
+                                                    <rect key="frame" x="25" y="13" width="364" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jf3-hN-2IW">
+                                                    <rect key="frame" x="2" y="43" width="410" height="3"/>
+                                                    <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="3" id="jEw-m9-g9V"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="TGp-9B-KR9" secondAttribute="trailing" constant="7" id="VCa-sl-PQB"/>
+                                                <constraint firstAttribute="trailing" secondItem="Jf3-hN-2IW" secondAttribute="trailing" constant="2" id="0Kn-eo-iDv"/>
+                                                <constraint firstAttribute="bottom" secondItem="Jf3-hN-2IW" secondAttribute="bottom" constant="1" id="Ozg-oH-NQ8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="TGp-9B-KR9" secondAttribute="trailing" constant="5" id="VCa-sl-PQB"/>
+                                                <constraint firstItem="Jf3-hN-2IW" firstAttribute="leading" secondItem="IFp-VJ-InJ" secondAttribute="leading" constant="2" id="af9-ol-eLe"/>
                                                 <constraint firstItem="TGp-9B-KR9" firstAttribute="top" secondItem="IFp-VJ-InJ" secondAttribute="topMargin" constant="2" id="cNK-1T-Nu0"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="TGp-9B-KR9" secondAttribute="bottom" constant="2" id="jHH-tR-SX7"/>
-                                                <constraint firstItem="TGp-9B-KR9" firstAttribute="leading" secondItem="IFp-VJ-InJ" secondAttribute="leadingMargin" constant="7" id="spQ-37-F5z"/>
+                                                <constraint firstItem="TGp-9B-KR9" firstAttribute="leading" secondItem="IFp-VJ-InJ" secondAttribute="leadingMargin" constant="5" id="spQ-37-F5z"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblTaskName" destination="TGp-9B-KR9" id="e5z-fO-QB3"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ajH-g7-IU8" id="XpN-gH-1sd"/>
+                                    <outlet property="delegate" destination="ajH-g7-IU8" id="gJU-QL-Wow"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jhc-Le-nIS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="jhc-Le-nIS" firstAttribute="bottom" secondItem="EqD-Iy-piQ" secondAttribute="bottom" constant="5" id="DXv-Uq-hT6"/>
+                            <constraint firstItem="jhc-Le-nIS" firstAttribute="bottom" secondItem="EqD-Iy-piQ" secondAttribute="bottom" constant="15" id="DXv-Uq-hT6"/>
                             <constraint firstItem="2sx-ds-Kth" firstAttribute="top" secondItem="jhc-Le-nIS" secondAttribute="top" constant="10" id="E8j-Qj-Acl"/>
                             <constraint firstItem="EqD-Iy-piQ" firstAttribute="leading" secondItem="jhc-Le-nIS" secondAttribute="leading" id="SKJ-da-zw3"/>
                             <constraint firstItem="EqD-Iy-piQ" firstAttribute="top" secondItem="2sx-ds-Kth" secondAttribute="bottom" constant="5" id="b0G-Rc-8dv"/>
-                            <constraint firstItem="2sx-ds-Kth" firstAttribute="leading" secondItem="jhc-Le-nIS" secondAttribute="leading" id="kAw-q7-GOs"/>
+                            <constraint firstItem="2sx-ds-Kth" firstAttribute="leading" secondItem="jhc-Le-nIS" secondAttribute="leading" constant="5" id="kAw-q7-GOs"/>
                             <constraint firstItem="2sx-ds-Kth" firstAttribute="trailing" secondItem="jhc-Le-nIS" secondAttribute="trailing" id="uzr-dW-bV6"/>
                             <constraint firstItem="EqD-Iy-piQ" firstAttribute="trailing" secondItem="jhc-Le-nIS" secondAttribute="trailing" id="wbg-Pa-GlJ"/>
                         </constraints>
@@ -133,6 +154,10 @@
                     <tabBarItem key="tabBarItem" title="Calendra" image="calendar" catalog="system" id="LIM-Ny-HPv">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="3" vertical="3"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="dtCalendar" destination="2sx-ds-Kth" id="joW-n7-3eF"/>
+                        <outlet property="tblTaskList" destination="EqD-Iy-piQ" id="PT1-Qz-n4p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uhe-Gp-uS8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -547,6 +572,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

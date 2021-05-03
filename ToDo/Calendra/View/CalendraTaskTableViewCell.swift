@@ -9,6 +9,8 @@ import UIKit
 
 class CalendraTaskTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lblTaskName:UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
