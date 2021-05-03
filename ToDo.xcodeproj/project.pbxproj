@@ -39,6 +39,7 @@
 		BEC766B025E669850067F1E6 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC766AF25E669850067F1E6 /* Toast.swift */; };
 		BED3442A25EF7E140071960A /* TextFieldErrorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED3442925EF7E140071960A /* TextFieldErrorHelper.swift */; };
 		BEE2AC46264000AF0006768B /* CalendraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE2AC45264000AF0006768B /* CalendraViewController.swift */; };
+		BEE2AC4B264003BC0006768B /* CalendraTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE2AC4A264003BC0006768B /* CalendraTaskTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		BEC766AF25E669850067F1E6 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		BED3442925EF7E140071960A /* TextFieldErrorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldErrorHelper.swift; sourceTree = "<group>"; };
 		BEE2AC45264000AF0006768B /* CalendraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendraViewController.swift; sourceTree = "<group>"; };
+		BEE2AC4A264003BC0006768B /* CalendraTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendraTaskTableViewCell.swift; sourceTree = "<group>"; };
 		EC9ABB91CF99D08032E80BA7 /* Pods_ToDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -319,9 +321,26 @@
 		BEE2AC442640008F0006768B /* Calendra */ = {
 			isa = PBXGroup;
 			children = (
-				BEE2AC45264000AF0006768B /* CalendraViewController.swift */,
+				BEE2AC49264003A00006768B /* View */,
+				BEE2AC482640038A0006768B /* ViewController */,
 			);
 			path = Calendra;
+			sourceTree = "<group>";
+		};
+		BEE2AC482640038A0006768B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BEE2AC45264000AF0006768B /* CalendraViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BEE2AC49264003A00006768B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BEE2AC4A264003BC0006768B /* CalendraTaskTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +462,7 @@
 				BE2AAC2D25F20626004E7F4C /* NetworkHelper.swift in Sources */,
 				BE1FA08525F7F83400F32A13 /* Constant.swift in Sources */,
 				BEA9E8392635144B0045E918 /* AddViewController.swift in Sources */,
+				BEE2AC4B264003BC0006768B /* CalendraTaskTableViewCell.swift in Sources */,
 				BE934E0625E4CBFB00DC4D34 /* DashboardViewController.swift in Sources */,
 				BEC766B025E669850067F1E6 /* Toast.swift in Sources */,
 				BE61138D25ED06A100E7EF9B /* todolist.xcdatamodeld in Sources */,
