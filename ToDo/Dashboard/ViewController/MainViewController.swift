@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
     //MARK: - Variable and Constant Decelration
     var taskList:[Task]!
     var completedTaskList:[Task]!
+    var pendingTaskList:[Task]!
     var refreshControl = UIRefreshControl()
     var isFresh:Bool = false
     let formatter =  DateFormatter()
@@ -42,6 +43,7 @@ class MainViewController: UIViewController {
         if result.status ==  NetworkHelper.RequestStatus.Success.rawValue {
             taskList = result.collection
             completedTaskList = taskList.filter{$0.status == true}
+            pendingTaskList = taskList.filter{$0.status == false}
             
         }else {
             Toast.showToast(controller: self, message: result.errorMsg)
@@ -91,8 +93,10 @@ extension MainViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return taskList.count
+            //pending
+            return pendingTaskList.count
         case 1:
+            //completedTaskList
             return completedTaskList.count
         default:
             return taskList.count
@@ -137,7 +141,7 @@ extension MainViewController : UITableViewDelegate, UITableViewDataSource {
         var task:Task!
         switch indexPath.section {
         case 0:
-            task = taskList[indexPath.row]
+            task = pendingTaskList[indexPath.row]
             break
         case 1:
             task = completedTaskList[indexPath.row]
@@ -150,7 +154,7 @@ extension MainViewController : UITableViewDelegate, UITableViewDataSource {
         cell.lblTaskName.text = task.taskName
         cell.lblDescription.text = task.taskdescription
         cell.lblDate.text = formatter.string(from: task.date ?? Date())
-
+        
         return cell
     }
     
