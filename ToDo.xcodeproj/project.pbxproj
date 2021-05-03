@@ -38,6 +38,7 @@
 		BEC766A925E634ED0067F1E6 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEC766A825E634ED0067F1E6 /* credentials.plist */; };
 		BEC766B025E669850067F1E6 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC766AF25E669850067F1E6 /* Toast.swift */; };
 		BED3442A25EF7E140071960A /* TextFieldErrorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED3442925EF7E140071960A /* TextFieldErrorHelper.swift */; };
+		BEE2AC46264000AF0006768B /* CalendraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE2AC45264000AF0006768B /* CalendraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		BEC766A825E634ED0067F1E6 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		BEC766AF25E669850067F1E6 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		BED3442925EF7E140071960A /* TextFieldErrorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldErrorHelper.swift; sourceTree = "<group>"; };
+		BEE2AC45264000AF0006768B /* CalendraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendraViewController.swift; sourceTree = "<group>"; };
 		EC9ABB91CF99D08032E80BA7 /* Pods_ToDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -159,6 +161,7 @@
 		BE934E0025E4CBFB00DC4D34 /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
+				BEE2AC442640008F0006768B /* Calendra */,
 				BEA9E82A2635144B0045E918 /* Task */,
 				BE61138A25ED060F00E7EF9B /* Database */,
 				BEC766AE25E669540067F1E6 /* Utility */,
@@ -313,6 +316,14 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		BEE2AC442640008F0006768B /* Calendra */ = {
+			isa = PBXGroup;
+			children = (
+				BEE2AC45264000AF0006768B /* CalendraViewController.swift */,
+			);
+			path = Calendra;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -441,6 +452,7 @@
 				BE1FA08025F780E200F32A13 /* TaskListTableViewCell.swift in Sources */,
 				BE61139125ED0A6500E7EF9B /* User+CoreDataClass.swift in Sources */,
 				BEA9E8342635144B0045E918 /* TaskProtocols.swift in Sources */,
+				BEE2AC46264000AF0006768B /* CalendraViewController.swift in Sources */,
 				BEA9E8372635144B0045E918 /* Task+CoreDataClass.swift in Sources */,
 				BE1FA07B25F72CC100F32A13 /* MainViewController.swift in Sources */,
 				BE5B77962632F4340095E8F3 /* MainViewModel.swift in Sources */,
